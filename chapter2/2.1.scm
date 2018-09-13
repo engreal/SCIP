@@ -13,3 +13,17 @@
         ((if (negative? (cdr rat))
             (lambda (x) (cons (* -1 (car x)) (* -1 (cdr x))))
             (lambda (x) x)) rat)))
+
+; 取有理数 x 的分子
+(define (number x)
+    (car x))
+
+; 取有理数 x 的分母
+(define (denom x)
+    (cdr x))
+
+; 打印有理数 x
+(define (print-rat x)
+    (display (number x))
+    (display "/")
+    (display (denom x)))
