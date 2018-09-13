@@ -1,0 +1,6 @@
+(define (tree-map func tree)
+    (map (lambda (subtree) 
+            (if (atom? subtree)
+                (func subtree)
+                (tree-map func subtree)))
+        tree))

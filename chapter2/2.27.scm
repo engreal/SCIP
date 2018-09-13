@@ -1,0 +1,12 @@
+(define (deep-reverse ls)
+    (letrec ((iter (lambda (s d)
+                (if (null? s)
+                    d
+                    (let ((head (car s)) (tail (cdr s)))
+                        (let ((head (car s)) (tail (cdr s)))
+                            (iter tail (cons (if (list? head)
+                                                (deep-reverse head)
+                                                head) 
+                                            d)))
+                    )))))
+        (iter ls `())))
