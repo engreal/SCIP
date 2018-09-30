@@ -1,0 +1,11 @@
+(define (reverse-fr sequence)
+    (fold-right (lambda (x y)
+                    (append y (list x)))
+                `()
+                sequence))
+
+(define (reverse-fl sequence)
+    (fold-left (lambda (x y)
+                    (cons y x))
+                `()
+                sequence))
