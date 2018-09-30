@@ -1,0 +1,5 @@
+(define (my-equal? a b)
+    (if (atom? a)
+        (and (atom? b) (eq? a b))
+        (and (my-equal? (car a) (car b)
+             (my-equal? (cdr a) (cdr b)))))) 
